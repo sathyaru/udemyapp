@@ -49,6 +49,11 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                 </ul>
+                @if (!Auth::guest())
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/admin') }}">Admin</a></li>
+                </ul>
+                @endif
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
